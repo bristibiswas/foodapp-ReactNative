@@ -1,20 +1,61 @@
+import 'react-native-gesture-handler';
+
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View , Image} from 'react-native';
+import * as React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+// import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Home from './src/Components/Home';
+import About from './src/Components/About';
+import imagePath from './src/Constant/imagePath';
+import AppNavigation from './src/AppNavigation';
 
-export default function App() {
+function App() {
+
+  // const Stack = createNativeStackNavigator();
+  // const Tab = createBottomTabNavigator();
+
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+    
+  //   <NavigationContainer className="bg-white">
+     
+  //   <Tab.Navigator initialRouteName={Home}>
+  //   <Tab.Screen name="Home" component={Home} 
+  //   options={{
+  //     tabBarIcon:({focused}) => {
+  //       return(
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  //               <Image source={imagePath.icHome}
+  //               style={{height:30,width:30}}
+
+  //               />
+  //       )
+  //     }
+  //   }}
+  //   />
+  //   <Tab.Screen name="About" component={About}
+  //       options={{
+  //         tabBarIcon:({focused}) => {
+  //           return(
+    
+  //                   <Image source={imagePath.icAbout}
+  //                   style={{height:30,width:30}}
+    
+  //                   />
+  //           )
+  //         }
+  //       }}
+    
+  //   />
+  // </Tab.Navigator>
+  // </NavigationContainer>
+  <AppNavigation/>
+
+  );
+};
+
+export default App;
+
+
